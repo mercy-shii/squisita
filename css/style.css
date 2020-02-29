@@ -1,0 +1,52 @@
+body{
+    font-size: 20px;
+    color: white;
+}
+header{
+    background-image: url("../images/frame-square-01.jpg");
+    height: 1100px;
+    background-size: cover;
+    
+}
+.clearfix after{
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.main-nav{
+    float: right;
+    margin-top: 60px; 
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+.main-content-header{
+    width: 1180px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    font-size: 13px;
+    transform: translate(-50%,-50%);
+    color: cornsilk;
+
+}
+.main-content-header li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-content-header li a{
+    color: darkturquoise;
+    font-size: 30px;
+}
