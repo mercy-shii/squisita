@@ -19,8 +19,8 @@
                         <input type="text" class="form-control" id="Name">
                     </div>
                     <div class="form-group">
-                        <label for="Pizza Size">Size:select list</label>
-                        <select class="form-control" id="sell" name="list">
+                        <label for="Pizza Size">Size</label>
+                        <select class="form-control" id="sell1" name="list">
                             <option>small </option>
                             <option>Medium </option>
                             <option>Large </option>
@@ -28,18 +28,48 @@
                     </div>
                     <div class="form-group">
                         <label for="Toppings">Toppings</label>
-                        <input type="text" class="form-control" id="Toppings">
+                        <select class="form-contol" id="sell2" name="list">
+                            <option>Pepperoni</option>
+                            <option>mushroom</option>
+                            <option>Onion</option>
+                            <option>Sausage</option>
+                            <option>Bacon</option>
+                            <option>Extra-cheese</option>
+                            <option>Black olives</option>
+                            <option>Green peppers</option>
+                            <option>Pineaple</option>
+                            <option>spinach</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="Crust">Crust</label>
-                        <input type="text" class="form-control" id="Crust">
+                        <select class="form-control" id="sell3" name="list">
+                            <option>stuffed</option>
+                            <option>Crispy</option>
+                            <option>Gluten-free</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="Amount">Amount</label>
                         <input type="text" class="form-control" id="Amount">
                     </div>
+                    <span class="btn btn-primary" id="add-order">Another order</span>
+                    <button type="submit" class="btn">Add</button>
                 </form>
+                <h2>order:</h2>
+                <ul id="Order">
 
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div id="show-order">
+                    <h2></h2>
+                    <p> Name: <span class="Name"></span></p>
+                    <p> Email: <span class="Email"></span></p>
+                    <p> size: <span class="Size"></span></p>
+                    <p> Crust: <span class="Crust"></span></p>
+                    <p> Toppings: <span class="Toppings"></span></p>
+                </div>
             </div>
         </div>
     </div>
