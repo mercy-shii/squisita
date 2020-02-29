@@ -4,20 +4,13 @@ body{
 }
 header{
     background-image: url("../images/frame-square-01.jpg");
-    height: 1100px;
+    height: 1000px;
     background-size: cover;
     
 }
-.clearfix after{
-    content: "";
-    visibility: hidden;
-    display: block;
-    height: 0px;
-    clear: both;
-}
 .row{
     max-width: 1180px;
-    margin: 0 auto;
+    
 }
 .main-nav{
     float: right;
@@ -49,4 +42,4 @@ header{
 .main-content-header li a{
     color: darkturquoise;
     font-size: 30px;
-}
+}.
