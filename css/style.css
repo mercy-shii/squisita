@@ -57,6 +57,7 @@ header{
 }
 .container{
     background-color: darkturquoise;
+    align-content: center;
 }
 .footer{
     color: dimgray;
