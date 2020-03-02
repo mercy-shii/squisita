@@ -6,6 +6,11 @@
     <title>Delivery</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -22,6 +27,7 @@
                         <label for="Email">Email</label>
                         <input type="text" class="form-control" id="Email">
                     </div>
+                    <div id="new-addresses">
                     <div class="form-group">
                         <label for="Phone Number">Phone Number</label>
                         <input type="text" class="form-control" id="Phone Number">
@@ -34,8 +40,23 @@
                         <label for="county">county</label>
                         <input type="text" class="form-control" id="Street">
                     </div>
+                   </div>
+                   <span class="btn btn-primary" id="add-addresses">Another Address</span>
+                   <button type="submit" class="btn">Add</button>
                 </form>
-
+                <h2>contacts</h2>
+                <ul id="contacts">
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="show-contact">
+                <h2></h2>
+                <p>Name: <span class="Name"></span></p>
+                <p>Email: <span class="Email"></span></p>
+                <p>Addresses: </p>
+                <ul id="addresses">
+                </ul>
             </div>
         </div>
     </div>
