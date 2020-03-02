@@ -6,10 +6,8 @@
     <title>Delivery</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -20,28 +18,30 @@
                 <h2>Add a Delivery:</h2>
                 <form id="new-Delivery">
                     <div class="form-group">
-                        <label for="Name">Name</label>
-                        <input type="text" class="form-control" id="Name">
+                        <label for="new-Name">Name</label>
+                        <input type="text" class="form-control" id="new-Name">
                     </div>
                     <div class="form-group">
-                        <label for="Email">Email</label>
-                        <input type="text" class="form-control" id="Email">
+                        <label for="new-Email">Email</label>
+                        <input type="text" class="form-control" id="new-Email">
                     </div>
                     <div id="new-addresses">
-                    <div class="form-group">
-                        <label for="Phone Number">Phone Number</label>
-                        <input type="text" class="form-control" id="Phone Number">
+                        <div class="new-address">
+                            <div class="form-group">
+                                <label for="new-street">street</label>
+                                <input type="text" class="form-control new-street">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-city">city</label>
+                                <input type="text" class="form-control new-city">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-county">county</label>
+                                <input type="text" class="form-control new-county">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="Street">Street</label>
-                        <input type="text" class="form-control" id="Street">
-                    </div>
-                    <div class="form-group">
-                        <label for="county">county</label>
-                        <input type="text" class="form-control" id="Street">
-                    </div>
-                   </div>
-                   <span class="btn btn-primary" id="add-addresses">Another Address</span>
+                    <span class="btn btn-primary" id="add-address">Another adresss</span>
                    <button type="submit" class="btn">Add</button>
                 </form>
                 <h2>contacts</h2>
@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="show-contact">
+            <div id="show-contact">
                 <h2></h2>
                 <p>Name: <span class="Name"></span></p>
                 <p>Email: <span class="Email"></span></p>

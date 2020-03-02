@@ -19,6 +19,7 @@ header{
 .main-nav li{
     display: inline-block;
     margin-left: 40px;
+    
 }
 .main-nav li a{
     color: white;
@@ -43,12 +44,14 @@ header{
     color: darkturquoise;
     font-size: 30px;
 }
-.row{
-    background-color: darkturquoise
-}
+
 #show-contact{
     display: none;
 }
-.contact{
-    cursor: pointer;
+.contacts{
+    display: none;
+}
+.row.main-nav{
+    float: right;
+
 }
