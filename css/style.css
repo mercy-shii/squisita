@@ -55,3 +55,11 @@ header{
     float: right;
 
 }
+.container{
+    background-color: darkturquoise;
+}
+.footer{
+    color: dimgray;
+    text-align: center;
+    background-color: darkturquoise;
+}
