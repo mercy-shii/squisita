@@ -1,16 +1,29 @@
 var newdelivery;
 //business logic
-function Delivery(Name,Email){
+function Delivery(Name,Email,Adress){
     this.Name=Name;
     this.Email=Email;
-    //this.Adress[];
+    this.Adress[];
+
 function Delivery(Name,Email){
     this.Name=Name;
     this.Email=Email;
 } 
 Delivery.prototype.Name = function(){
-    return this.Name + "" +this.Email;
+    return this.Name + "" +this.Email+"";
 }  
+var price,crust_price,topping_price;
+let total = 0;
+function order(name,size,Top,crust,Total){
+  this.name = name;
+  this.size = size;
+  this.Top = Top;
+  this.crust = crust;
+
+  order.prototype.name = function(){
+    return this.name + "" + this.size + this.Top + this.crust;
+  }
+}
 }
 //user interface logic
 $(document).ready(function(){
@@ -86,6 +99,7 @@ $(document).ready(function(){
     $("input.new-county").val("");
 
   });
+
 
 
 });

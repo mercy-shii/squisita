@@ -6,6 +6,9 @@
     <title>ORDER</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,20 +18,29 @@
                 <h2>Add an order:</h2>
                 <form id="new-order">
                     <div class="form-group">
-                        <label for="new-Name">Name</label>
-                        <input type="text" class="form-control" id="new-Name">
+                        <label for="select">Your choice</label>
+                        <select class="form-control" id ="sell" name="name">
+                            <option selected value="0">Your choice please!</option>
+                            <option value="BA-perfect pizza">BA-perfect</option>
+                            <option value="chicken Bacon">chicken Bacon</option>
+                            <option value="winter pizza">winter pizza</option>
+                            <option value="Home-pizza">Home-pizza</option>
+                            <option value="Thumb">Thumb</option>
+                            <option value="pizza yummy">pizza yummy</option>
+                            <option value="Getty pizza">Getty pizza</option>    
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="new-Pizza Size">Size</label>
-                        <select class="form-control" id="sell1" name="new-list">
-                            <option>small </option>
-                            <option>Medium </option>
-                            <option>Large </option>
+                        <select class="form-control" id="sell1" name="size">
+                            <option value="small">small...ksh 700 </option>
+                            <option value="medium">Medium...ksh 1500 </option>
+                            <option value="large">Large...ksh 2400 </option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="new-Toppings">Top</label>
-                        <select class="form-contol" id="sell2" name="list">
+                        <select class="form-contol" id="sell2" name="Top">
                             <option>Pepperoni</option>
                             <option>mushroom</option>
                             <option>Onion</option>
@@ -43,15 +55,15 @@
                     </div>
                     <div class="form-group">
                         <label for="new-Crust">Crust</label>
-                        <select class="form-control" id="sell3" name="new-list">
-                            <option>stuffed</option>
-                            <option>Crispy</option>
-                            <option>Gluten-free</option>
+                        <select class="form-control" id="sell3" name="Crust">
+                            <option value="stuffed">stuffed...ksh 400</option>
+                            <option value="cripsy">Crispy...ksh 350</option>
+                            <option value="Gluten-free">Gluten-free...ksh500</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="Amount">Amount</label>
-                        <input type="text" class="form-control" id="Amount">
+                        <label for="Total">Total</label>
+                        <input type="text" class="form-control" id="Total">
                     </div>
                     <span class="btn btn-primary" id="add-order">Another order</span>
                     <button type="submit" class="btn">Add</button>
@@ -69,6 +81,7 @@
                     <p>  <span class="Size"></span></p>
                     <p>  <span class="Crust"></span></p>
                     <p>  <span class="Toppings"></span></p>
+                    <p>  <span class="Total"></span></p>
                 </div>
             </div>
         </div>
