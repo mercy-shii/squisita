@@ -12,17 +12,6 @@ function Delivery(Name,Email){
 Delivery.prototype.Name = function(){
     return this.Name + "" +this.Email+"";
 }  
-var price,crust_price,topping_price;
-let total = 0;
-function order(name,size,Top,crust,Total){
-  this.name = name;
-  this.size = size;
-  this.Top = Top;
-  this.crust = crust;
-
-  order.prototype.name = function(){
-    return this.name + "" + this.size + this.Top + this.crust;
-  }
 }
 }
 //user interface logic
@@ -47,58 +36,75 @@ $(document).ready(function(){
         $(".Email").text(newdelivery.Email);
     });
 
-  $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
-                                 '<div class="form-group">' +
-                                   '<label for="new-street">Street</label>' +
-                                   '<input type="text" class="form-control new-street">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="new-city">City</label>' +
-                                   '<input type="text" class="form-control new-city">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="new-county">County</label>' +
-                                   '<input type="text" class="form-control new-county">' +
-                                 '</div>' +
-                               '</div>');
-  });
+    if (document.readystate == "loading") {
+      document.addEventListener("DOMcontedloaded",ready)
+    }
+    else {
+      ready()
+    }
 
-  $("form#new-delivery").submit(function(event) {
-    event.preventDefault();
+    function ready({
+      var removeOrderpizza butttons = document.getElementsByClassName('btn-danger')
+      for (var i = 0;i < removeorderitembutttons.length; i++){
+        var button = removeorderitembutttons[i]
+        button.addEventListener('click',removeorderitem)
+      }
 
-    var inputtedName = $("input#new-Name").val();
-    var inputtedemail = $("input#new-Email").val();
-    var newdelivery = new delivery(inputtedName, inputtedEmail);
+      var quantityinputs = document.getElementsByClassName('order,quantity-input')
+      for (var i = 0; i < quqntityInputs.length; i++){
+        var input = quqntityInputs[i]
+        input.addEventListener('change,quantitychanged')
+      }
 
-    $(".new-address").each(function() {
-      var inputtedStreet = $(this).find("input.new-street").val();
-      var inputtedCity = $(this).find("input.new-city").val();
-      var inputtedCounty = $(this).find("input.new-county").val();
-      var newAddress = new Address(inputtedStreet, inputtedCity, inputtedCounty)
-      newproperty.addresses.push(newAddress)
-    });
+      var addToOrderButtons = document.getElementsByClassName("order-pizza-button")
+      for (var i = 0; i < addToOrderButtons.length; i++){
+        var button = addToOrderButtons[i]
+        button.addEventListener('click',addToOrderclicked)
+      }
 
-    $("ul#contacts").append("<li><span class='contact'>" + newdelivery.Name() + "</span></li>");
+      document.getElementsByClassName('btn-order'[0].addEventListener('click',orderClicked)
 
-    $(".addres").last().click(function() {
-      $("#show-contact").show();
-      $("#show-contact h2").text(newdelivery.Name());
-      $(".Name").text(newContact.firstName);
-      $(".Email").text(newContact.lastName);
-      $("ul#addresses").text("");
-      newdelivery.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.county + "</li>");
-      });
-    });
+    })
+    function orderClicked() {
+      alert("Thank you for your purchase")
+    }
+    function removeorderitem(event){
+      var buttonClicked = event.target
+      buttonClicked.parentElement.remove()
+      updateOrderTotal()
+    }
 
-    $("input#new-Name").val("");
-    $("input#new-Email").val("");
-    $("input.new-street").val("");
-    $("input.new-city").val("");
-    $("input.new-county").val("");
+    function quantitychanged(event){
+      var input = event.target
+      if (isNaN(input.value) || input.value <= 0){
+        input.value = 1
+      }
+      updateOrderTotal()
+    }
+    function addToOrderclicked(event){
+      var button = event.target
+      var orderitem = button.parentElement.parentElement
+      var title = orderpizza.getElementsByClassName('order-pizza-title')[0].innerText
+      var price = orderpizza.getElementsByClassName('order-pizza-price')[0].innerText
+      var imagesrc = orderitem.getElementsByClassName('order-pizza-image')[0].src
+      addItemToOrder(title,price,imagesrc)
+      updateOrderTotal()
+    } 
 
-  });
+    function addPizzaToOrder(title,price,imagesrc) {
+      var orderRow = document.createElement('div')
+      orderRow.classList.add('order-row')
+      var orderItems = document.getElementsByClassName('order-pizza')[0]
+      for (var i = 0; i < orderpizzaNames.length;i++) {
+        if(orderpizzaNames[i].innerText == title) {
+          alert('This item is already added to order')
+          return
+        }
+      } 
+      
+    }
+
+  
 
 
 
