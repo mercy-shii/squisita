@@ -10,8 +10,6 @@ squisita is a pizza place whereby it offers variety of pizza which are human sat
 html
 css
 javascript
-## Known Bugs
-calculation of order
 ## Technologies Used
 html
 css
