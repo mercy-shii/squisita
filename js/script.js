@@ -101,8 +101,17 @@ $(document).ready(function(){
           return
         }
       } 
-      
-    }
+      var orderRowDetails = 
+      <div class="order-pizza order-column">
+        <img class="order-pizza-image" src="${imagesrc}">
+        <span class="order-price order-column">${title}</span>
+      </div>
+      <span class="order-price order-column">${price}</span>
+      <div class="order-quantity 0rder-column">
+        <input class="order-quantity-input" type="number"value="1"
+        
+      </div>
+    
 
   
 
