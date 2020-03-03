@@ -100,7 +100,6 @@ $(document).ready(function(){
           alert('This item is already added to order')
           return
         }
-      } 
       var orderRowDetails = 
       <div class="order-pizza order-column">
         <img class="order-pizza-image" src="${imagesrc}">
@@ -108,9 +107,31 @@ $(document).ready(function(){
       </div>
       <span class="order-price order-column">${price}</span>
       <div class="order-quantity 0rder-column">
-        <input class="order-quantity-input" type="number"value="1"
-        
+        <input class="order-quantity-input" type="number"value="1">
+          <button class="btn btn-danger" type="button">REMOVE</button>
       </div>
+      orderRow.innerHTML = orderRowDetails
+      orderpizza.append(orderRow)
+      orderRow.getElementsByClassName('btn-danger')[0].addEventlistner('click,removeorderpizza')
+      orderRow.getElementsByClassName('order-quantity-input')[0].addEventListener('change',quantitychanged)
+    }
+
+      function updateorderTotal(){
+        var orderpizzacontainer = document.getElementsByClassName("order-pizza")[0]
+        var orderRows = orderpizzacontainer.getElementsByClassName('order-row')
+        var total = 0
+        for (var i = 0; i < orderRowDetails.length;i++){
+          var orderRow = orderRows = orderRows[i]
+          var priceElement = orderRow.getElementsByClassName('order-price')[0]
+          var quantityElement = orderRow.getElementsByClassName('order-quantity-input')[0]
+          var price = parseFloat(priceElement.innerText.replace('$,'))
+          var quantity = quantityElement.value
+          total = total + (price * quantity)
+          
+        }
+        total = math.round(total*100)/100
+        document.getElementsByClassName('order-total-price')[0.innerText = '$'+ total]
+      }
     
 
   
