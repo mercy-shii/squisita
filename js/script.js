@@ -3,7 +3,7 @@ var newdelivery;
 function Delivery(Name,Email,Adress){
     this.Name=Name;
     this.Email=Email;
-    this.Adress[];
+    this.Adress=[];
 
 function Delivery(Name,Email){
     this.Name=Name;
@@ -13,7 +13,7 @@ Delivery.prototype.Name = function(){
     return this.Name + "" +this.Email+"";
 }  
 }
-}
+
 //user interface logic
 $(document).ready(function(){
     $("form#new-Delivery").submit(function(event){
@@ -44,11 +44,11 @@ $(document).ready(function(){
     }
 
     function ready({
-      var removeOrderpizza butttons = document.getElementsByClassName('btn-danger')
+      var removeOrderpizzabutttons = document.getElementsByClassName('btn-danger');
       for (var i = 0;i < removeorderitembutttons.length; i++){
         var button = removeorderitembutttons[i]
         button.addEventListener('click',removeorderitem)
-      }
+      };
 
       var quantityinputs = document.getElementsByClassName('order,quantity-input')
       for (var i = 0; i < quqntityInputs.length; i++){
